@@ -1,11 +1,5 @@
 pipeline {
-    agent {
-        label 'Build and Test'
-    }
-
-    triggers {       
-        pollSCM('* * * * *')
-    }
+    agent any
 
     stages {
         stage('Restore Dependencies') {
